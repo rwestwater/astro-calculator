@@ -10,10 +10,10 @@ class Star
     public $mass;
     public $array_of_planets;
 
-    public function __construct($name, $uuid, $mass) 
+    public function __construct($name, $mass) 
     {
         $this->name = $name;
-        $this->uuid = $uuid;
+        $this->uuid = Identity::generate();
         $this->mass = $mass;
         $this->array_of_planets = array();
     }
