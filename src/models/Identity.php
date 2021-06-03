@@ -1,6 +1,7 @@
 <?php
 
 namespace SolarSystem;
+require '../vendor/autoload.php';
 
 use Ramsey\Uuid\Uuid;
 
