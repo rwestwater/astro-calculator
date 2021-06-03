@@ -1,8 +1,7 @@
 <?php
 
 namespace SolarSystem;
-require 'models/Identity.php';
-
+require 'Identity.php';
 
 class Planet 
 {
@@ -15,7 +14,7 @@ class Planet
     public function __construct($name, $mass, $astro_unit) 
     {
         $this->name = $name;
-        // $this->uuid = Identity::generate();
+        $this->uuid = Identity::generate();
         $this->mass = $mass;
         $this->astro_unit = $astro_unit;
     }

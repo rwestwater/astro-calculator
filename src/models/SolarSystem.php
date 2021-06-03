@@ -10,7 +10,7 @@ final class SolarSystem
     public $mass;
     public $array_of_stars_and_planets;
 
-    public function __construct($name, $uuid, $mass) 
+    public function __construct($name, $mass) 
         {
             $this->name = $name;
             $this->uuid = $uuid;
