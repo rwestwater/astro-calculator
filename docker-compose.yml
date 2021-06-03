@@ -1,0 +1,9 @@
+version: "3.5"
+
+services:
+  composer:
+    image: composer:latest
+    working_dir: /Users/rachelwestwater/repos/php_scripts/astro-calculator
+    volumes:
+      - .:/usr/app
+    command: update
