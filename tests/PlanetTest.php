@@ -5,6 +5,7 @@ namespace SolarSystem;
 use PHPUnit\Framework\TestCase;
 require 'models/Planet.php';
 
+
 class PlanetTest extends TestCase
 {
     
@@ -13,12 +14,13 @@ class PlanetTest extends TestCase
         $planet = new Planet('Earth', 50, 25);
         $this->assertEquals('Earth', $planet->getPlanetName());
     }
-
-    // public function testAPlanetHasAUuid()
-    // {
-    //     $planet = new Planet('Earth', 50, 25);
-    //     $this->assertEquals('', $planet->getPlanetUuid());
-    // }
+    
+    public function testAPlanetHasAUuid()
+    {
+        $uuid = Identity::generate();
+        $planet = new Planet('Earth', 50, 25);
+        $this->assertEquals($uuid, $planet->getPlanetUuid());
+    }
 
     public function testAPlanetHasAMass()
     {
