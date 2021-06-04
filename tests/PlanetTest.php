@@ -10,24 +10,26 @@ class PlanetTest extends TestCase
     
     public function testAPlanetHasAName()
     {
-        $planet = new Planet('Earth', '343287vjhv', 50, 25);
+        $planet = new Planet('Earth', 50, 25);
         $this->assertEquals('Earth', $planet->getPlanetName());
     }
 
-    public function testAPlanetHasAUuid()
+    // public function testAPlanetHasAUuid()
+    // {
+    //     $planet = new Planet('Earth', 50, 25);
+    //     $this->assertEquals('', $planet->getPlanetUuid());
+    // }
+
+    public function testAPlanetHasAMass()
     {
-        // @todo
+        $planet = new Planet('Earth', 50, 25);
+        $this->assertEquals(50, $planet->getPlanetMass());
     }
+
+    public function testAPlanetHasAnAstronomicalDistance()
+    {
+        $planet = new Planet('Earth', 50, 25);
+        $this->assertEquals(25, $planet->getPlanetAstroUnit());
+    }
+    
 }
-
-
-    // public function test_a_planet_has_a_mass()
-    // {
-    //     // @todo
-    // }
-
-    // public function test_a_planet_has_an_astronomical_distance()
-    // {
-    //     // @todo
-    // }
-    // }
