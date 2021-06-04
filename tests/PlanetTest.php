@@ -19,7 +19,7 @@ class PlanetTest extends TestCase
     {
         $uuid = Identity::generate();
         $planet = new Planet('Earth', 50, 25);
-        $this->assertEquals($uuid, $planet->getPlanetUuid());
+        $this->assertEquals(true, ($planet->getPlanetUuid() instanceof Identity));
     }
 
     public function testAPlanetHasAMass()
