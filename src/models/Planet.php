@@ -28,7 +28,7 @@ class Planet
     // return the planet's uuid
     public function getPlanetUuid() : Identity
     {
-        print $this->uuid;
+        return $this->uuid;
     }
 
     // return the planet's mass
